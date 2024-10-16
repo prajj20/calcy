@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+
+    <!-- google font used for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- google font icons used in calculator -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="calculator-body">
+      <div class="calculator">
+        <input type="text" placeholder="0" id="inputbtn" disabled />
+        <div>
+          <button class="numberbtn" id="btn-ac" onclick="clearDisplay()">
+            AC
+          </button>
+          <button class="numberbtn" id="btn-module" onclick="input('%')">
+            %
+          </button>
+          <button class="numberbtn" id="btn-del" onclick="deleteLast()">
+            DEL
+          </button>
+          <button class="numberbtn" id="btn-per" onclick="input('/')">/</button>
+        </div>
+
+        <div>
+          <button class="numberbtn" onclick="input('7')">7</button>
+          <button class="numberbtn" onclick="input('8')">8</button>
+          <button class="numberbtn" onclick="input('9')">9</button>
+          <button class="numberbtn" id="btn-mul" onclick="input('x')">x</button>
+        </div>
+
+        <div>
+          <button class="numberbtn" onclick="input('4')">4</button>
+          <button class="numberbtn" onclick="input('5')">5</button>
+          <button class="numberbtn" onclick="input('6')">6</button>
+          <button class="numberbtn" id="btn-minus" onclick="input('-')">
+            -
+          </button>
+        </div>
+
+        <div>
+          <button class="numberbtn" onclick="input('1')">1</button>
+          <button class="numberbtn" onclick="input('2')">2</button>
+          <button class="numberbtn" onclick="input('3')">3</button>
+          <button class="numberbtn" id="btn-plus" onclick="input('+')">
+            +
+          </button>
+        </div>
+
+        <div>
+          <button class="numberbtn" onclick="input('00')">00</button>
+          <button class="numberbtn" onclick="input('0')">0</button>
+          <button class="numberbtn" onclick="input('.')">.</button>
+          <button class="equal-btn" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
